@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class DifficultyButton : MonoBehaviour
 {
+    public int difficulty;
+    private GameManager gameManager;
     private Button button;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -23,5 +25,6 @@ public class DifficultyButton : MonoBehaviour
     void SetDifficulty()
     {
         Debug.Log(gameObject.name + " was clicked");
+        gameManager.StartGame(difficulty);
     }
 }
